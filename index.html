@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  </head>
+  <body>
+    <div class="container">
+      <div class="hurray-message">
+        <img class="animate__animated animate__tada" class="star-img" src="star.png" alt="">
+        <img class="cup-img" src="cup.png" alt="">
+        <h1 class="animate__animated animate__tada">HURRAY!!</h1>
+        <H2>YOU WON THE GAME</H2>
+        <button class="play-again" onclick="hurray_play_again()">PLAY AGAIN</button>
+      </div>
+      <header>
+        <div class="white-box">
+          <div class="text-part">
+            <ul>
+              <li>ROCK</li>
+              <li>PAPER</li>
+              <li>SCISSORS</li>
+            </ul>
+          </div>
+          <div class="score-part">
+            <div class="box-1">
+              <div class="computer">COMPUTER SCORE</div>
+              <input class="pc-score" value="0" readonly type="text" />
+            </div>
+            <div class="box-2">
+              <div class="your">YOUR SCORE</div>
+              <input class="user-score" value="0" readonly type="text" />
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <main>
+        <div class="game">
+          <div id="line-1" class="lines">1</div>
+          <div id="line-2" class="lines">2</div>
+          <div id="line-3" class="lines">3</div>
+
+          <button class="rock" onclick="rock()"><img src="rock.png" alt="" /></button>
+          <button class="paper" onclick="paper()">
+            <img src="paper.png" alt="" />
+          </button>
+          <button class="scissor" onclick="scissor()">
+            <img src="scissor.png" alt="" />
+          </button>
+        </div>
+
+        <div class="result">
+          <div class="user-circle-1">
+            <div class="user-circle-2">
+              <div class="user-circle-3">
+                <p>YOU PICKED</p>
+                <div class="user">
+                  <img id="user-image" src="" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="para">
+            <span class="message-1"></span>
+            <p class="message-2"></p>
+            <button class="play-again" onclick="stop_result_show_game()">PLAY AGAIN</button>
+          </div>
+
+          <div class="pc-circle-1">
+            <div class="pc-circle-2">
+              <div class="pc-circle-3">
+                <p>PC PICKED</p>
+                <div class="pc">
+                  <img id="pc-image" src="" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <footer>
+        <div class="instruction">
+          <div class="close" onclick="close_popup()">
+            <div class="cross-line-1"></div>
+            <div class="cross-line-2"></div>
+          </div>
+          <div class="heading">Game Rules</div>
+          <ul>
+            <li>
+              <img src="Rectangle 5 (1).png" alt="" /> Rock beats
+              scissors, scissors beat paper, and paper beats rock.
+            </li>
+            <li>
+              <img src="Rectangle 5 (1).png" alt="" /> Agree ahead of time
+              whether you’ll count off “rock, paper, scissors, shoot” or just
+              “rock, paper, scissors.”
+            </li>
+            <li>
+              <img src="Rectangle 5 (1).png" alt="" /> Use rock, paper,
+              scissors to settle minor decisions or simply play to pass the time
+            </li>
+            <li>
+              <img src="Rectangle 5 (1).png" alt="" /> If both players lay
+              down the same hand, each player lays down another hand
+            </li>
+          </ul>
+        </div>
+        <div class="rules" onclick="show_rules()">RULES</div>
+        <div class="next" onclick="show_hurray()">NEXT</div>
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
